@@ -1,0 +1,40 @@
+.sidebar__navigation {
+  background-color: #fff;
+  padding: 40px;
+  border-right: 2px solid rgb(221, 220, 220);
+  height: 100vh;
+}
+
+.sidebar__navigation .logo__section h1 {
+  color: royalblue;
+}
+
+.sidebar__navigation .navlinks__section {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.sidebar__navigation .navlinks__section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.sidebar__navigation .navlinks__section ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 12px;
+  font-size: 18px;
+  display: flex;
+  gap: 1.2em;
+}
+
+.sidebar__navigation .navlinks__section ul li a:hover,
+.sidebar__navigation .navlinks__section ul li a:active,
+.sidebar__navigation .navlinks__section ul li a.active {
+  background-color: royalblue;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 30px;
+}

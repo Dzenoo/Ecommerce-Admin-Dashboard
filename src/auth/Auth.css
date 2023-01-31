@@ -1,0 +1,13 @@
+.form {
+  display: block;
+  max-width: 600px;
+  margin: 200px auto;
+  background-color: #fff;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.108);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.form h1 {
+  text-align: center;
+}

@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect } from "react";
-import { validate } from "../../util/validate";
+import { validate } from "../util/validate";
 
 import "./Input.css";
 

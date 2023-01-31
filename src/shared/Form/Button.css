@@ -1,0 +1,75 @@
+.button {
+  padding: 20px;
+  border: none;
+  background-color: #222222;
+  color: #fff !important;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #434242;
+  transition: 0.5 !important;
+  color: #fff !important;
+}
+
+.button--action {
+  background: #2c8e73 !important;
+  color: #ffff !important;
+}
+
+.button--action:hover,
+.button--action:active {
+  background: #13c8a4 !important;
+  color: #fff !important;
+}
+
+.button--inverse {
+  background: transparent;
+  border: 1.2px solid #434242 !important;
+  color: #434242 !important;
+}
+
+.button--inverse:hover,
+.button--inverse:active {
+  color: #fff !important;
+  background: #222222 !important;
+}
+
+.button--danger {
+  background: #830000 !important;
+  border-color: #830000 !important;
+}
+
+.button--danger:hover,
+.button--danger:active {
+  background: #f34343 !important;
+  border-color: #f34343 !important;
+}
+
+.button:disabled,
+.button:hover:disabled,
+.button:active:disabled {
+  background: #ccc;
+  color: #979797;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 425px) {
+  .button {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 324px) {
+  .button {
+    font-size: 10px;
+    font-weight: bold;
+  }
+}

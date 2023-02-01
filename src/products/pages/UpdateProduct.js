@@ -7,7 +7,7 @@ import {
   VALIDATOR_MINLENGTH,
   VALIDATOR_REQUIRE,
 } from "../../shared/util/validate";
-
+import { ToastContainer, toast } from "react-toastify";
 import Input from "../../shared/components/Form/Input";
 import Loader from "../../shared/components/UI/Loader";
 import Button from "../../shared/components/Form/Button";
@@ -20,7 +20,7 @@ const UpdateProduct = (props) => {
   // Get auth status from context
   const auth = useContext(AuthContext);
   // Get loaded product
-  const [loadedProduct, setLoadedProduct] = useState();
+  const [loadedProduct, setLoadedProduct] = useState([]);
   // Get product by Id
   const productId = useParams().productId;
   // Get form handling functions from custom form hook
@@ -115,8 +115,10 @@ const UpdateProduct = (props) => {
           Authorization: "Bearer " + auth.token,
         }
       );
-    } catch (err) {}
-    navigate("/admin");
+    } catch (err) {
+      toast.error(err);
+    }
+    navigate("/products");
   };
 
   // If loading is true, show loader
@@ -140,6 +142,7 @@ const UpdateProduct = (props) => {
   return (
     <>
       <ErrorModal error={error} onClear={clearError} />
+      <ToastContainer />
       {!isLoading && loadedProduct && (
         <form className="create_form" onSubmit={productUpdateHandler}>
           <Input

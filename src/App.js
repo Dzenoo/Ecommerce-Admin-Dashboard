@@ -25,7 +25,7 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<UpdateProduct />} />
+        <Route path="/products/:productId" element={<UpdateProduct />} />
         <Route path="/addproduct" element={<CreateProduct />} />
         <Route path="/users" element={<Users />} />
         <Route path="*" element={<Navigate to="/" />} />
@@ -50,12 +50,10 @@ function App() {
         logout: logout,
       }}
     >
-      <section className="main_section">
-        {auth.isLoggedIn || <Navigation />}
-        <main>
-          <Routes>{routes}</Routes>
-        </main>
-      </section>
+      {auth.isLoggedIn || <Navigation />}
+      <main>
+        <Routes>{routes}</Routes>
+      </main>
     </AuthContext.Provider>
   );
 }

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useHttpClient } from "../shared/hooks/http-hook";
-
+import ErrorModal from "../shared/components/UI/ErrorModal";
+import Loader from "../shared/components/UI/Loader";
 import priceIcon from "../shared/assets/1.png";
 import orderIcon from "../shared/assets/2.png";
 import productIcon from "../shared/assets/3.png";
-
 import "./Dashboard.css";
 
 const Dashboard = () => {
@@ -51,9 +51,8 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="dashboard_hero">
-        <h1>Dashboard</h1>
-      </div>
+      <ErrorModal error={error} onClear={clearError} />
+      {isLoading && <Loader />}
       <div className="dashboard_wrapper">
         <div className="card price_item">
           <img src={orderIcon} alt="price" />

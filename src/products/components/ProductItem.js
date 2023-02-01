@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../shared/context/AuthContext";
 import { useHttpClient } from "../../shared/hooks/http-hook";
-
 import Loader from "../../shared/components/UI/Loader";
 import ErrorModal from "../../shared/components/UI/ErrorModal";
 import Button from "../../shared/components/Form/Button";
-
 import "./ProductItem.css";
 
 const ProductItem = (props) => {

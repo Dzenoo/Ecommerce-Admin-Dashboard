@@ -15,14 +15,15 @@ textarea {
 .form-control label {
   font-weight: bold;
   margin-bottom: 0.5rem;
+  color: #fff;
 }
 
 .form-control input,
 .form-control textarea {
   width: 100%;
   font: inherit;
-  border: 1px solid #363637;
   background: #ffff;
+  border: none;
   padding: 1.12rem 0.25rem;
   border-radius: 6px;
 }

@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
   flex-direction: column;
 }
 
 .image-upload__preview {
+  color: #fff;
   height: 12rem;
   border: 1px solid #ccc;
   display: flex;

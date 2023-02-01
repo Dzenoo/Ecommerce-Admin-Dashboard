@@ -50,7 +50,7 @@ function App() {
         logout: logout,
       }}
     >
-      {auth.isLoggedIn || <Navigation />}
+      <Navigation />
       <main>
         <Routes>{routes}</Routes>
       </main>

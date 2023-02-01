@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import ErrorModal from "../../shared/components/UI/ErrorModal";
-import Loader from "../../shared/components/UI/Loader";
 import { useHttpClient } from "../../shared/hooks/http-hook";
 
 import ProductList from "../components/ProductList";
+import ErrorModal from "../../shared/components/UI/ErrorModal";
+import Loader from "../../shared/components/UI/Loader";
 
 const Products = () => {
   const [products, setProducts] = useState([]);

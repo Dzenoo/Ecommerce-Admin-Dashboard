@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import { AiOutlineFolderAdd } from "react-icons/ai";
 import { FiUsers } from "react-icons/fi";
 import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -26,6 +27,12 @@ const Navigation = () => {
             <NavLink to="/products">
               <AiOutlineShopping />
               Proizvodi
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/addproduct">
+              <AiOutlineFolderAdd />
+              Dodaj Proizvod
             </NavLink>
           </li>
           <li>

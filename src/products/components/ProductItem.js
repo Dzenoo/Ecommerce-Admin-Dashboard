@@ -50,10 +50,10 @@ const ProductItem = (props) => {
             Opis: <b>{description}</b>
           </p>
         </div>
-        <div className="btns">
-          {/* <Button action to={`/admin/${_id}`}>
+        <div style={{ gap: "2em", display: "flex" }}>
+          <Button action to={`/products/${_id}`}>
             Izmeni
-          </Button> */}
+          </Button>
           <Button danger onClick={confirmDeleteHandler}>
             Izbrisi
           </Button>

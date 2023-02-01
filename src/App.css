@@ -9,6 +9,14 @@
   background-color: aliceblue;
 }
 
+.create_form {
+  background-color: #fff;
+  overflow: hidden;
+  padding: 60px;
+  max-width: 800px;
+  margin: auto;
+}
+
 main {
   flex: 2;
 }

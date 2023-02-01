@@ -2,8 +2,8 @@
   background-color: #fff;
   padding: 12px;
   border-right: 2px solid rgb(221, 220, 220);
-  height: 100vh;
   text-align: center;
+  height: 60rem;
 }
 
 .sidebar__navigation .logo__section h1 {

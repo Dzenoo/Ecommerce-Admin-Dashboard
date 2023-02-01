@@ -7,8 +7,10 @@ import Auth from "./auth/Auth";
 import Products from "./products/pages/Products";
 import Orders from "./orders/pages/Orders";
 import Users from "./users/pages/Users";
-import Dashboard from "./Dashboard/Dashboard";
+import Dashboard from "./dashboard/Dashboard";
 import Navigation from "./shared/components/navbar/Navigation";
+import CreateProduct from "./products/pages/CreateProduct";
+import UpdateProduct from "./products/pages/UpdateProduct";
 
 import "./App.css";
 
@@ -23,6 +25,8 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<UpdateProduct />} />
+        <Route path="/addproduct" element={<CreateProduct />} />
         <Route path="/users" element={<Users />} />
         <Route path="*" element={<Navigate to="/" />} />
       </>

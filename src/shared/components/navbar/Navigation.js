@@ -1,12 +1,10 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import Button from "../../shared/Form/Button";
+import { NavLink } from "react-router-dom";
 
 import { FiUsers } from "react-icons/fi";
 import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlineShopping } from "react-icons/ai";
-// Import css
 import "./Navigation.css";
 
 const Navigation = () => {
@@ -43,7 +41,6 @@ const Navigation = () => {
             </NavLink>
           </li>
         </ul>
-        <Button className="btn_Logout">Izloguj se</Button>
       </div>
     </div>
   );

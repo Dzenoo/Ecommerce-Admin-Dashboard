@@ -7,8 +7,8 @@ import {
   VALIDATOR_REQUIRE,
 } from "../shared/util/validate";
 
-import Input from "../shared/Form/Input";
-import Button from "../shared/Form/Button";
+import Input from "../shared/components/Form/Input";
+import Button from "../shared/components/Form/Button";
 import "./Auth.css";
 
 const Auth = () => {

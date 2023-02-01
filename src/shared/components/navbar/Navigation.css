@@ -1,12 +1,13 @@
 .sidebar__navigation {
   background-color: #fff;
-  padding: 40px;
+  padding: 12px;
   border-right: 2px solid rgb(221, 220, 220);
   height: 100vh;
+  text-align: center;
 }
 
 .sidebar__navigation .logo__section h1 {
-  color: royalblue;
+  color: #0081c9;
 }
 
 .sidebar__navigation .navlinks__section {
@@ -33,7 +34,7 @@
 .sidebar__navigation .navlinks__section ul li a:hover,
 .sidebar__navigation .navlinks__section ul li a:active,
 .sidebar__navigation .navlinks__section ul li a.active {
-  background-color: royalblue;
+  background-color: #0081c9;
   color: #fff;
   transition: 0.3s;
   border-radius: 30px;

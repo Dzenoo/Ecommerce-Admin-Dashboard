@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { useAuth } from "./shared/hooks/auth-hook";
 import { AuthContext } from "./shared/context/AuthContext";
@@ -8,12 +8,13 @@ import Products from "./products/pages/Products";
 import Orders from "./orders/pages/Orders";
 import Users from "./users/pages/Users";
 import Dashboard from "./Dashboard/Dashboard";
-import Navigation from "./shared/navbar/Navigation";
+import Navigation from "./shared/components/navbar/Navigation";
 
 import "./App.css";
 
 function App() {
   const { token, userId, login, logout } = useAuth();
+  const auth = useContext(AuthContext);
 
   let routes;
   if (token) {
@@ -46,7 +47,7 @@ function App() {
       }}
     >
       <section className="main_section">
-        <Navigation />
+        {auth.isLoggedIn || <Navigation />}
         <main>
           <Routes>{routes}</Routes>
         </main>

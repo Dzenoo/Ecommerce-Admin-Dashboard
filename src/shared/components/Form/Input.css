@@ -15,7 +15,7 @@ textarea {
 .form-control label {
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #fff;
+  color: #333;
 }
 
 .form-control input,
@@ -23,6 +23,7 @@ textarea {
   width: 100%;
   font: inherit;
   background: #ffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border: none;
   padding: 1.12rem 0.25rem;
   border-radius: 6px;

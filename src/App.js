@@ -13,6 +13,7 @@ import CreateProduct from "./products/pages/CreateProduct";
 import UpdateProduct from "./products/pages/UpdateProduct";
 
 import "./App.css";
+import { MainProvider } from "./shared/context/MainContext";
 
 function App() {
   const { token, userId, login, logout } = useAuth();
@@ -50,10 +51,12 @@ function App() {
         logout: logout,
       }}
     >
-      <Navigation />
-      <main>
-        <Routes>{routes}</Routes>
-      </main>
+      <MainProvider>
+        <Navigation />
+        <main>
+          <Routes>{routes}</Routes>
+        </main>
+      </MainProvider>
     </AuthContext.Provider>
   );
 }

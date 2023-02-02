@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 .main_section {
   display: flex;
   align-items: center;
@@ -10,12 +15,20 @@
 }
 
 .create_form {
-  background-color: rgb(0, 149, 255);
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 20px;
   overflow: hidden;
   padding: 60px;
   max-width: 800px;
   margin: auto;
+}
+
+.user_wrapper {
+  padding: 60px;
+}
+.order_wrapper {
+  padding: 20px;
 }
 
 main {

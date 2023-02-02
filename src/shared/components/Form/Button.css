@@ -1,7 +1,7 @@
 .button {
   padding: 20px;
   border: none;
-  background-color: #222222;
+  background-color: #0780d6;
   color: #fff !important;
   cursor: pointer;
   text-decoration: none;
@@ -12,19 +12,19 @@
 }
 
 .button:hover {
-  background-color: #434242;
+  background-color: #0780d6;
   transition: 0.5 !important;
   color: #fff !important;
 }
 
 .button--action {
-  background: #2c8e73 !important;
+  background: #0780d6 !important;
   color: #ffff !important;
 }
 
 .button--action:hover,
 .button--action:active {
-  background: #13c8a4 !important;
+  background: #0780d6 !important;
   color: #fff !important;
 }
 

@@ -1,0 +1,9 @@
+.order_item {
+  box-shadow: 0 2px 8px rgb(18, 149, 237);
+  background-color: rgb(241, 244, 246);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: 2em;
+}

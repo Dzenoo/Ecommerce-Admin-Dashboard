@@ -1,0 +1,20 @@
+.users_list {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgb(18, 149, 237);
+  padding: 40px;
+  margin: auto;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.users_list .user_item {
+  box-shadow: 0 2px 8px rgb(18, 149, 237);
+  background-color: rgb(202, 234, 255);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  gap: 2em;
+}

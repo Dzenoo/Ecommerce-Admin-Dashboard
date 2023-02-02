@@ -42,11 +42,11 @@ const ProductItem = (props) => {
             Na stanju: <b>{inStock}</b>
           </p>
           <p>
-            Cena: <b>{price}</b> DIN
+            Cena: <b>{price} DIN</b>
           </p>
-          <p>
+          <span>
             Opis: <b>{description}</b>
-          </p>
+          </span>
         </div>
         <div style={{ gap: "2em", display: "flex" }}>
           <Button action to={`/products/${_id}`}>

@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import Button from "../../shared/components/Form/Button";
+import { MainContext } from "../../shared/context/MainContext";
 
 import "./OrderItem.css";
 
 const OrderItem = ({ orders }) => {
+  const main = useContext(MainContext);
+
   return (
-    <div className="order_item">
+    <div className="orders_section">
       {orders.map((order) => (
-        <li key={order._id}>
-          <h3>Informacije p kupcu</h3>
+        <div key={order._id} className="naslovi">
+          <Button danger onClick={() => main.deleteOrderHandler(order._id)}>
+            Izbrisi
+          </Button>
+          <h3>Informacije o porudzbini</h3>
           <p>
             Id: <b>{order._id}</b>
           </p>
@@ -29,10 +36,9 @@ const OrderItem = ({ orders }) => {
           <p>
             Telefon: <b> {order.customer.phone}</b>
           </p>
-
           {order.items.product.map((item) => (
-            <div key={item._id} className="order_product">
-              <h3>Informacije o Porudzbini</h3>
+            <div key={item._id} className="product_info">
+              <h3>Informacije o proizvodu</h3>
               <p>
                 Ime <b>{item.title}</b>
               </p>
@@ -56,7 +62,7 @@ const OrderItem = ({ orders }) => {
               />
             </div>
           ))}
-        </li>
+        </div>
       ))}
     </div>
   );

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useHttpClient } from "../hooks/http-hook";
+import { AuthContext } from "../context/AuthContext";
 
 export const MainContext = React.createContext();
 
@@ -7,6 +8,7 @@ export function MainProvider({ children }) {
   const { sendRequest, isLoading, error, clearError } = useHttpClient();
   const [orders, setOrders] = React.useState([]);
   const [users, setUsers] = React.useState([]);
+  const auth = React.useContext(AuthContext);
 
   // Fetch Orders
   React.useEffect(() => {
@@ -34,8 +36,26 @@ export function MainProvider({ children }) {
     fetchUsers();
   }, []);
 
+  const deleteOrderHandler = async (enteredId) => {
+    try {
+      await sendRequest(
+        `${process.env.REACT_APP_BACKEND_URL}/orders/${enteredId}`,
+        "DELETE",
+        null,
+        {
+          Authorization: "Bearer " + auth.token,
+        }
+      );
+    } catch (err) {}
+    onDelete(enteredId);
+  };
+
+  const onDelete = (enteredId) => {
+    setOrders((prevOrders) => prevOrders.filter((o) => o._id !== enteredId));
+  };
+
   return (
-    <MainContext.Provider value={{ orders, users }}>
+    <MainContext.Provider value={{ orders, users, deleteOrderHandler }}>
       {children}
     </MainContext.Provider>
   );

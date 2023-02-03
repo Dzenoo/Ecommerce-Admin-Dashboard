@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useHttpClient } from "../shared/hooks/http-hook";
+
 import ErrorModal from "../shared/components/UI/ErrorModal";
 import Loader from "../shared/components/UI/Loader";
 import priceIcon from "../shared/assets/1.png";
 import orderIcon from "../shared/assets/2.png";
 import productIcon from "../shared/assets/3.png";
+
 import "./Dashboard.css";
 
 const Dashboard = () => {

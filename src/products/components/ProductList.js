@@ -1,6 +1,5 @@
 import React from "react";
 import ProductItem from "./ProductItem";
-
 import "./ProductList.css";
 
 const ProductList = (props) => {

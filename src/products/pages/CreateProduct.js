@@ -74,6 +74,8 @@ const CreateProduct = () => {
         formData,
         { Authorization: "Bearer " + auth.token }
       );
+
+      navigate("/products");
     } catch (error) {}
   };
 

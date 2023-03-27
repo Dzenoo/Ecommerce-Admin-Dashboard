@@ -8,6 +8,8 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const { sendRequest, isLoading, error, clearError } = useHttpClient();
 
+  console.log(products);
+
   const deleteProd = (deletedProductId) => {
     setProducts((prevProducts) =>
       prevProducts.filter((p) => p._id !== deletedProductId)

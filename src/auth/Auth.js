@@ -2,7 +2,10 @@ import React, { useContext } from "react";
 import { useForm } from "../shared/hooks/form-hook";
 import { useHttpClient } from "../shared/hooks/http-hook";
 import { AuthContext } from "../shared/context/AuthContext";
-import { VALIDATOR_MINLENGTH, VALIDATOR_REQUIRE} from "../shared/util/validate";
+import {
+  VALIDATOR_MINLENGTH,
+  VALIDATOR_REQUIRE,
+} from "../shared/util/validate";
 import Input from "../shared/components/Form/Input";
 import Button from "../shared/components/Form/Button";
 import "./Auth.css";
@@ -29,7 +32,7 @@ const Auth = () => {
 
     try {
       const responseData = await sendRequest(
-        "http://localhost:8000/api/users/login",
+        `${process.env.REACT_APP_BACKEND_URL}/users/login`,
         "POST",
         JSON.stringify({
           email: formState.inputs.email.value,

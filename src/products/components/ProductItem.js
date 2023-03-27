@@ -8,7 +8,7 @@ import "./ProductItem.css";
 
 const ProductItem = (props) => {
   const auth = useContext(AuthContext);
-  const { _id, image, title, price, description, category, inStock } = props;
+  const { _id, image, title, price, category, inStock } = props;
   const { isLoading, error, clearError, sendRequest } = useHttpClient();
 
   const confirmDeleteHandler = async () => {
@@ -44,9 +44,6 @@ const ProductItem = (props) => {
           <p>
             Cena: <b>{price} DIN</b>
           </p>
-          <span>
-            Opis: <b>{description}</b>
-          </span>
         </div>
         <div style={{ gap: "2em", display: "flex" }}>
           <Button action to={`/products/${_id}`}>

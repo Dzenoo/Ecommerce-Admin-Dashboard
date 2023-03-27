@@ -30,7 +30,7 @@ const ProductItem = (props) => {
       <ErrorModal error={error} onClear={clearError} />
       {isLoading && <Loader asOverlay />}
       <div className="product_item" key={_id}>
-        <img src={image} alt={title} />
+        <img src={`${process.env.REACT_APP_ASSETS_URL}/${image}`} alt={title} />
         <div className="text">
           <p>
             Kategorija: <b>{category}</b>
